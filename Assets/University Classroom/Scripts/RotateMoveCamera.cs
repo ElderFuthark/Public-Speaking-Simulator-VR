@@ -14,7 +14,7 @@ public class RotateMoveCamera : MonoBehaviour
     public float sensY = 100.0f;
 
     float rotationY = 0.0f;
-    float rotationX = 0.0f;
+    float rotationX = 180.0f;
 
     float MouseX;
     float MouseY;

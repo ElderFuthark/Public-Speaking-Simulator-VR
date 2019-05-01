@@ -13,8 +13,7 @@ public class timer : MonoBehaviour {
 	public bool paused;
 	// Use this for initialization
 	void Start () {
-		totalTime = 60f * 60f;		// 5 minutes in seconds
-		totalTime += 15f;
+		totalTime = 60f * 5f;		// 5 minutes in seconds
 		paused = true;
 		buttonImg = GameObject.Find("Start and Pause").GetComponent<Image>();			// Grab the start and pause button's image
 		clockText = GameObject.Find("Time").GetComponent<TextMeshProUGUI>();			// Grab the text mesh pro GUI component
@@ -31,7 +30,7 @@ public class timer : MonoBehaviour {
 		}
 		if(paused == false)
 		{
-			buttonImg.color = Color.red;
+			buttonImg.color = Color.green;
 			//GameObject.Find("Start and Pause").GetComponent<Text>().text = "Pause";
 			yield return new WaitUntil(() => paused == true);
 		}

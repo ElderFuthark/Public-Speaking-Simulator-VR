@@ -44,6 +44,7 @@ public class timer : MonoBehaviour {
 		if(totalTime < 0)						// If totalTime is less than 0 do something.
 		{
 			Debug.Log("Game Over");
+			enabled = false;
 		}
 		int seconds = (int)(totalTime % 60);				// seconds conversion
 		int minute = (int)((totalTime/60) % 60);			// minutes conversion
